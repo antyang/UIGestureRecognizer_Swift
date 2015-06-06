@@ -1,25 +1,162 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="popOver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07e-ju-9ke">
+                                <rect key="frame" x="16" y="46" width="81" height="81"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4c-76-cQY"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zw-BT-HuM" appends="YES" id="RIK-F8-Mdu"/>
+                                    <segue destination="yAc-Sl-Vwr" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="07e-ju-9ke" id="p8F-cw-g6D">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0t-0S-Nki">
+                                <rect key="frame" x="147" y="46" width="81" height="81"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBZ-L4-tz7"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zw-BT-HuM" appends="YES" id="oDb-Xa-PNy"/>
+                                    <segue destination="yAc-Sl-Vwr" kind="popoverPresentation" identifier="popoverSegueabc" popoverAnchorView="K0t-0S-Nki" id="XDj-dS-4zz">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed6-z2-lxA">
+                                <rect key="frame" x="16" y="169" width="81" height="81"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4h6-1u-ZSY"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zw-BT-HuM" appends="YES" id="L7O-Z7-fav"/>
+                                    <segue destination="yAc-Sl-Vwr" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="Ed6-z2-lxA" id="Ny8-dt-Y4K">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btj-y7-a1j">
+                                <rect key="frame" x="147" y="169" width="81" height="81"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="91a-l4-AzC"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zw-BT-HuM" appends="YES" id="hnm-ty-CwG"/>
+                                    <segue destination="yAc-Sl-Vwr" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="Btj-y7-a1j" id="vdh-hW-fCS">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zg1-uF-vxT">
+                                <rect key="frame" x="278" y="46" width="81" height="81"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AwQ-yT-c7G"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zw-BT-HuM" appends="YES" id="P2h-CB-EIG"/>
+                                    <segue destination="yAc-Sl-Vwr" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="zg1-uF-vxT" id="ofn-2i-8GK">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-LT-hXp">
+                                <rect key="frame" x="278" y="169" width="81" height="81"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOB-CV-uav"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zw-BT-HuM" appends="YES" id="2IN-C3-77J"/>
+                                    <segue destination="yAc-Sl-Vwr" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorView="Mu9-LT-hXp" id="Ra1-yc-Fpb">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button1" destination="07e-ju-9ke" id="0QF-hJ-NYA"/>
+                        <outlet property="button2" destination="K0t-0S-Nki" id="i3E-Ih-4Y0"/>
+                        <outlet property="button3" destination="Ed6-z2-lxA" id="nQc-Dt-R0F"/>
+                        <outlet property="button4" destination="Btj-y7-a1j" id="PQ3-dW-7CA"/>
+                        <outlet property="button5" destination="zg1-uF-vxT" id="3uB-fh-bGy"/>
+                        <outlet property="button6" destination="Mu9-LT-hXp" id="hEx-0f-RPU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer delaysTouchesBegan="YES" allowableMovement="10" minimumPressDuration="1.5" id="2zw-BT-HuM">
+                    <connections>
+                        <action selector="onLongPress:" destination="BYZ-38-t0r" id="RfX-2a-gAf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="474" y="611"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Je-lS-BgJ">
+            <objects>
+                <viewController id="yAc-Sl-Vwr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iMp-yO-4ka"/>
+                        <viewControllerLayoutGuide type="bottom" id="6ig-8i-O6J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gjQ-GG-Esz">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RpL-q9-es8">
+                                <rect key="frame" x="32" y="28" width="149" height="31"/>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4uY-vt-3Ts">
+                                <rect key="frame" x="219" y="20" width="94" height="29"/>
+                            </stepper>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJh-ES-kFL">
+                                <rect key="frame" x="242" y="57" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65860840064328485" green="1" blue="0.59044418264522736" alpha="0.059999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="500" height="100"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2R-fD-MUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="611"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XDj-dS-4zz"/>
+    </inferredMetricsTieBreakers>
 </document>
